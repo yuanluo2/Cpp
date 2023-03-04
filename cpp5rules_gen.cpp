@@ -20,14 +20,14 @@ int main(int argc, char* argv[]){
 	str += std::format("public:\n");
 	str += std::format("    explicit {0}(){{}}\n", className);
 	str += std::format("\n");
-	str += std::format("    explicit {0}(const {0}&) = delete;\n", className);
-	str += std::format("    {0}& operator=(const {0}&) = delete;\n", className);
+	str += std::format("    explicit {0}(const {0}& other) = delete;\n", className);
+	str += std::format("    {0}& operator=(const {0}& other) = delete;\n", className);
 	str += std::format("\n");
-	str += std::format("    explicit {0}({0}&&) noexcept {{\n", className);
+	str += std::format("    explicit {0}({0}&& other) noexcept {{\n", className);
 	str += std::format("        std::swap(, );\n");
 	str += std::format("    }}\n");
 	str += std::format("\n");
-	str += std::format("    {0}& operator=({0}&&) noexcept {{\n", className);
+	str += std::format("    {0}& operator=({0}&& other) noexcept {{\n", className);
 	str += std::format("        std::swap(, );\n");
 	str += std::format("        return *this;\n");
 	str += std::format("    }}\n");
