@@ -3,7 +3,7 @@
 #include <format>
 
 /*
-	clang++ cpp5rules_gen.cpp -std=c++20 -o gen5rules
+	clang++ cpp5rules_gen.cpp -std=c++20 -o gen5rules.exe
 */
 int main(int argc, char* argv[]){
 	if (argc != 2){
