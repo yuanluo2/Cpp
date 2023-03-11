@@ -79,7 +79,7 @@ auto invalid_socket = [](auto&& i){ return i == INVALID_SOCKET; };
   }
   
   
-  c api wrapper class:
+  c api wrapper class, as you can see below, no need to know the parameters or return type of the socket() function:
   
   try{
     auto my_socket = make_c_wrapper(socket, invalid_socket, ErrorMsg("socket"));
