@@ -48,6 +48,7 @@ decltype(auto) make_c_wrapper(CFunction _c_func_, ErrorCond _error_condition_, E
 	return CWrapper<CFunction, ErrorCond, ErrorMsgGen>{ _c_func_, _error_condition_, _error_msg_gen_ };
 }
 
+
 /*
   some extra useful tools. you can customize them by yourself.
 */
@@ -62,6 +63,7 @@ auto not_0          = [](auto&& i) { return i != 0; };
 auto lt_0           = [](auto&& i) { return i < 0; };
 auto eq_nullptr     = [](auto&& i) { return i == nullptr; };
 auto invalid_socket = [](auto&& i){ return i == INVALID_SOCKET; };
+
 
 /*
   usage:
