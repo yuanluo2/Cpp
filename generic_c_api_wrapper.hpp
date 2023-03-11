@@ -62,7 +62,7 @@ public:
 auto not_0          = [](auto&& i) { return i != 0; };
 auto lt_0           = [](auto&& i) { return i < 0; };
 auto eq_nullptr     = [](auto&& i) { return i == nullptr; };
-auto invalid_socket = [](auto&& i){ return i == INVALID_SOCKET; };
+auto invalid_socket = [](auto&& i) { return i == INVALID_SOCKET; };
 
 
 /*
